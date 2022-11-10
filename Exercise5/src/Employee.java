@@ -6,9 +6,10 @@ public class Employee {
 	
 	private Department department; //aggregation
 	
-	public Employee(String name, int id) {
+	public Employee(String name, int id, Department d) {
 		this.setName(name);
 		this.setEmployeeId(id);
+		this.setDepartment(d);
 		System.out.println("There is a new Employee: "+ name+", "+ id);
 		
 	}

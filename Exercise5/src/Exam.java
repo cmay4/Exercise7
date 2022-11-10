@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Exam {
 	
-	private int maxValue;
+	private int maxValue = 60;
 	
 	private ArrayList<Student> students = new ArrayList<>(); //many-to-many association
 	private Course course;

@@ -8,8 +8,8 @@ public class Professor extends Employee { //inheritance
 	private ArrayList <Exam> exams = new ArrayList<>();
 	private Course course;
 
-	public Professor(String name, int id){//, Department deptname, Course course) {
-		super(name, id); //generalization
+	public Professor(String name, int id, Department d){
+		super(name, id, d); //generalization
 		this.course = course;
 		courses.add(course); //one-to-many
 	}

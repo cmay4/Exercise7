@@ -5,7 +5,7 @@ public class Student {
 	private int id;
 	private String name;
 	
-	private ArrayList<Exam> exams; //many-to-many
+	private ArrayList<Exam> exams; //many-to-many association
 	private ArrayList<Course> courses;
 	
 	private Project project;

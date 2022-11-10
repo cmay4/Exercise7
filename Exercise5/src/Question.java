@@ -5,9 +5,6 @@ public class Question {
 	private int maxValue;
 	private int id;
 
-//	public Question() {
-//		
-//	}
 	
 	public Question(int id, String task, int value) {
 		this.id=id;

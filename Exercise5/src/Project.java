@@ -3,8 +3,11 @@ public class Project {
 
 	private String name;
 	
-	public Project() {
-		
+	private Course course; //one-to-many & 0...1
+	
+	public Project(String name, Course course) {
+		setName(name);
+		this.course=course; //one-to-many association
 	}
 	
 	public String getName() {

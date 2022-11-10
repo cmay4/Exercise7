@@ -2,28 +2,31 @@ import java.util.ArrayList;
 
 public class TA {
 	
+	String name;
 	
 	private ArrayList<Exam> exams;
 	private ArrayList<Course> courses;
 	
-	public TA() {
-		
+	public TA(String name) {
+		setName(name);
 	}
 	
 	public Course getCourse() {
-		Course c = new Course();
+		Course c = courses.get(0);
 		return c;
 	}
 	
 	public String getName() {
-		return null;
+		return this.name;
+	}
+	
+	
+	
+	public void setName(String name) {
+		this.name=name;
 	}
 	
 	public void extendCourse(Course course) {
-		
-	}
-	
-	public void setName(String name) {
-		
+		courses.add(course);
 	}
 }
