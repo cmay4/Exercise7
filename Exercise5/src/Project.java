@@ -1,9 +1,12 @@
+import java.util.ArrayList;
 
 public class Project {
 
 	private String name;
 	
 	private Course course; //one-to-many & 0...1
+	
+	private ArrayList<Student> members = new ArrayList<>();
 	
 	public Project(String name, Course course) {
 		setName(name);
@@ -19,7 +22,7 @@ public class Project {
 	}
 	
 	public void addMember(Student student) {
-		
+		members.add(student);
 	}
 	
 	public Student getMembers() {
