@@ -4,15 +4,13 @@ public class Course {
 	
 	private int id;
 	private String name;
-	private int maxCapacity;
-	private Boolean isFull;
+	private int maxCapacity, currentCap=0;
+	private Boolean isFull=false;
 	
 	private Professor[] professors = new Professor[3];
 	private ArrayList<Exam> exams;
-	
-//	public Course() {
-//		
-//	}
+	private ArrayList<Student> students = new ArrayList<>();
+
 	
 	public Course(int id, String name, int cap, Professor prof) {
 		this.id=id;
@@ -26,13 +24,27 @@ public class Course {
 	}
 	
 	public void enroll(Student student) {
-		
+		if(!isFull) {
+			students.add(student);
+			isFull=this.isFull();
+		}
 	}
 	
+	public Boolean isFull() {
+		if(students.size()==maxCapacity) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 	public void apply(TA ta) {
 		
 	}
 	
+	public int getMaxCap() {
+		return maxCapacity;
+	}
 	public void setMaxCap(int max) {
 		this.maxCapacity=max;
 	}

@@ -7,9 +7,10 @@ public class Employee {
 	private Department department; //aggregation
 	
 	public Employee(String name, int id) {
-		this.name = name;
-		this.employeeId = id;
-		//this.setDepartment(new Department(departmentname));
+		this.setName(name);
+		this.setEmployeeId(id);
+		System.out.println("There is a new Employee: "+ name+", "+ id);
+		
 	}
 
 	public Department getDepartment() {
@@ -18,6 +19,22 @@ public class Employee {
 
 	public void setDepartment(Department department) {
 		this.department = department;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getEmployeeId() {
+		return employeeId;
+	}
+
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
 	}
 	
 	

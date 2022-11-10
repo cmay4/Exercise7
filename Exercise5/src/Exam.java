@@ -8,11 +8,13 @@ public class Exam {
 	private Course course;
 	
 	//composition has-a relationship
-	private ArrayList <Question> questions = new ArrayList<>(); 
+	private ArrayList <Question> questions;; 
 	
-	
-	public Exam(Course course, int id, String task, int value ) {
-		addQuestion(id,task,value); //min. one Question... infinite
+	/*
+	 * @requires questions != null
+	 */
+	public Exam(Course course, ArrayList<Question> questions) { //composition 
+		this.questions = questions; //min. one Question... infinite
 		this.course = course; //exactly one course
 	}
 	

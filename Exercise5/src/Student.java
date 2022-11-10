@@ -13,6 +13,7 @@ public class Student {
 	public Student(int id, String name) {
 		this.id=id;
 		this.name=name;
+		System.out.println("There is a new Student: "+name+ " ,"+id);
 	}
 	
 	public String getName() {
