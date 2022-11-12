@@ -10,7 +10,7 @@ public class Project {
 	
 	public Project(String name, Course course) {
 		setName(name);
-		this.course=course; //one-to-many association
+		this.course=course; //one-to-many association, each Project is fromexactly one course
 	}
 	
 	public String getName() {
@@ -23,6 +23,7 @@ public class Project {
 	
 	public void addMember(Student student) {
 		members.add(student);
+		student.addProject(this);
 	}
 	
 	public Student getMembers() {

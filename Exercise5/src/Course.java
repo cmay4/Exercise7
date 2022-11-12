@@ -13,7 +13,7 @@ public class Course {
 	
 	private ArrayList<Student> students = new ArrayList<>();
 	
-	private ArrayList<Project> project; //one-to-many association, 0...* multiplicity
+	private ArrayList<Project> project; //one-to-many association, 0...* multiplicity; one course can have many projects
 	
 	public Course(int id, String name, int cap) {
 		this.id=id;
@@ -38,10 +38,13 @@ public class Course {
 	}
 	
 	public void enroll(Student student) {
+		isFull();
 		if(!isFull) {
 			students.add(student);
+			student.addCourse(this);
 			isFull=this.isFull();
 		}
+		
 	}
 	
 	public Boolean isFull() {
