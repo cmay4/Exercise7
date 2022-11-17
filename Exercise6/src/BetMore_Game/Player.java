@@ -5,10 +5,10 @@ public class Player {
 	
 	int x; 
 	private String name; 
-	Boolean user_selected = false;
+	private Boolean user_selected = false;
 	
 	public Player(String name) {
-		setName(name);
+		this.name=name;
 	}
 	
 	public void start() {
@@ -20,8 +20,13 @@ public class Player {
 		return name;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+
+	public Boolean getUser_selected() {
+		return user_selected;
+	}
+
+	public void setUser_selected(Boolean user_selected) {
+		this.user_selected = user_selected;
 	}
 	
 	
