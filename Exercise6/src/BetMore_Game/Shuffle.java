@@ -27,7 +27,7 @@ public class Shuffle {
 			while(p.getUser_selected()==false && times < 5){
 				p.x = r.nextInt(100)+1;
 				times++;
-				System.out.println("Would you like to pick this number "+p.x+" ? - y='YES', n='NO'");
+				System.out.println("Would you like to pick this number "+p.x+" ? - y='YES'y  ");
 				if(s.next().equals("y")) {
 					p.setUser_selected(true);
 				}
